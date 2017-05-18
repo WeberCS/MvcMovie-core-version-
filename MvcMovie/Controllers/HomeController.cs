@@ -31,5 +31,12 @@ namespace MvcMovie.Controllers
         {
             return View();
         }
+
+        public ViewResult Welcome(string name, int numTimes = 1)
+        {
+            ViewData["Message"] = "Hello " + name;
+            ViewData["NumTimes"] = numTimes;
+            return View();
+        }
     }
 }
